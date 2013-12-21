@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = UserSwitch::VERSION
   s.authors     = ["Kevin Shu"]
   s.email       = ["kevin78515@gmail.com"]
-  s.homepage    = "http://www.kevinshu.com"
+  s.homepage    = "https://github.com/kevin-shu/user_switch"
   s.summary     = "Switch the login account in seconds."
   s.description = "Switch the login account in seconds. Depends on devise."
 

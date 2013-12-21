@@ -3,7 +3,7 @@ module UserSwitch
   module Panel
 
     def self.included(base)
-      base.after_filter :user_switch_output, :if => lambda { request.format.to_s == "text/html" && !(!!request.xhr?) }
+      base.after_filter :user_switch_output, :if => lambda { response.content_type == "text/html" && !(!!request.xhr?) }
     end
 
     def user_switch_output
