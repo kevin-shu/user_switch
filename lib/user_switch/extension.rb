@@ -8,7 +8,7 @@ module UserSwitch
 
     def user_switch_output
       # self.
-      self.response.body += "<link href='/assets/user_switch.css' media='all' rel='stylesheet' type='text/css' />"
+      self.response.body += "<link href='#{Rails.application.config.assets.prefix}/user_switch.css' media='all' rel='stylesheet' type='text/css' />"
       self.response.body += "<div class='user-switch-panel'><div class='icon'></div><div class='detail'><b>User Switch</b><hr>"
       UserSwitch.available_users.each do |scope,proc|
         self.response.body += "#{scope}: <form action='/user_switch/#{scope}' method='post'><select name='resource_id'>"
